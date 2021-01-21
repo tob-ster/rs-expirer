@@ -126,6 +126,7 @@ Partial Class Form1
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form1"
         Me.Text = "rs-expirer 0.2"
+        Me.TopMost = True
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
