@@ -1,7 +1,6 @@
 ﻿Public Class Form1
     Dim RoastDate As DateTime = Now
     Dim DataObject As DataObject
-
     Private Sub MonthCalendar1_DateChanged(sender As Object, e As DateRangeEventArgs) Handles MonthCalendar1.DateChanged
         RoastDate = MonthCalendar1.SelectionStart
     End Sub
@@ -10,7 +9,6 @@
         Dim RoastDateString As String = FormatDateTime(RoastDate, DateFormat.ShortDate)
         Dim ExpiryDateString As String = FormatDateTime(ExpiryDate, DateFormat.ShortDate)
         With ListView1
-            ListView1.AutoResizeColumns(True)
             ListView1.Items.Insert(0, RoastDateString)
             ListView1.Items.Insert(1, "__________")
             ListView1.Items.Insert(2, ExpiryDateString)

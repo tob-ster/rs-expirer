@@ -37,9 +37,10 @@ Partial Class Form1
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.SystemColors.Window
         Me.GroupBox1.Controls.Add(Me.MonthCalendar1)
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.GroupBox1.Location = New System.Drawing.Point(2, 0)
+        Me.GroupBox1.Location = New System.Drawing.Point(4, 0)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(368, 188)
         Me.GroupBox1.TabIndex = 0
@@ -56,44 +57,48 @@ Partial Class Form1
         '
         'GroupBox2
         '
+        Me.GroupBox2.BackColor = System.Drawing.SystemColors.Window
         Me.GroupBox2.Controls.Add(Me.Button1)
         Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.GroupBox2.Location = New System.Drawing.Point(2, 190)
+        Me.GroupBox2.Location = New System.Drawing.Point(4, 190)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(368, 72)
-        Me.GroupBox2.TabIndex = 1
+        Me.GroupBox2.Size = New System.Drawing.Size(368, 73)
+        Me.GroupBox2.TabIndex = 0
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "MHD berechnen (+18 Monate)"
         '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.Location = New System.Drawing.Point(4, 20)
+        Me.Button1.Location = New System.Drawing.Point(10, 21)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(360, 47)
+        Me.Button1.Size = New System.Drawing.Size(309, 47)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Berechnen und Ergebnis kopieren"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'GroupBox3
         '
+        Me.GroupBox3.BackColor = System.Drawing.SystemColors.Window
         Me.GroupBox3.Controls.Add(Me.ListView1)
         Me.GroupBox3.Controls.Add(Me.Label2)
         Me.GroupBox3.Controls.Add(Me.Label1)
-        Me.GroupBox3.Location = New System.Drawing.Point(2, 262)
+        Me.GroupBox3.Location = New System.Drawing.Point(4, 262)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(368, 418)
-        Me.GroupBox3.TabIndex = 2
+        Me.GroupBox3.TabIndex = 0
         Me.GroupBox3.TabStop = False
         '
         'ListView1
         '
         Me.ListView1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.ListView1.FullRowSelect = True
         Me.ListView1.HideSelection = False
         Me.ListView1.Location = New System.Drawing.Point(6, 39)
+        Me.ListView1.MultiSelect = False
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(313, 373)
-        Me.ListView1.TabIndex = 2
+        Me.ListView1.TabIndex = 0
         Me.ListView1.UseCompatibleStateImageBehavior = False
         '
         'Label2
@@ -103,7 +108,7 @@ Partial Class Form1
         Me.Label2.Location = New System.Drawing.Point(170, 16)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(46, 21)
-        Me.Label2.TabIndex = 1
+        Me.Label2.TabIndex = 0
         Me.Label2.Text = "MHD"
         '
         'Label1
@@ -120,7 +125,8 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(373, 681)
+        Me.BackColor = System.Drawing.SystemColors.Window
+        Me.ClientSize = New System.Drawing.Size(376, 681)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
