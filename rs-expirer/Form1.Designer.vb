@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
@@ -28,8 +28,9 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ColumnHeader1 = New System.Windows.Forms.ColumnHeader()
+        Me.ColumnHeader2 = New System.Windows.Forms.ColumnHeader()
+        Me.ColumnHeader3 = New System.Windows.Forms.ColumnHeader()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -50,6 +51,7 @@ Partial Class Form1
         'MonthCalendar1
         '
         Me.MonthCalendar1.CalendarDimensions = New System.Drawing.Size(2, 1)
+        Me.MonthCalendar1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.MonthCalendar1.Location = New System.Drawing.Point(4, 20)
         Me.MonthCalendar1.MaxSelectionCount = 1
         Me.MonthCalendar1.Name = "MonthCalendar1"
@@ -70,9 +72,9 @@ Partial Class Form1
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.Location = New System.Drawing.Point(10, 21)
+        Me.Button1.Location = New System.Drawing.Point(4, 20)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(309, 47)
+        Me.Button1.Size = New System.Drawing.Size(360, 47)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Berechnen und Ergebnis kopieren"
         Me.Button1.UseVisualStyleBackColor = True
@@ -81,8 +83,6 @@ Partial Class Form1
         '
         Me.GroupBox3.BackColor = System.Drawing.SystemColors.Window
         Me.GroupBox3.Controls.Add(Me.ListView1)
-        Me.GroupBox3.Controls.Add(Me.Label2)
-        Me.GroupBox3.Controls.Add(Me.Label1)
         Me.GroupBox3.Location = New System.Drawing.Point(4, 262)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(368, 418)
@@ -91,35 +91,36 @@ Partial Class Form1
         '
         'ListView1
         '
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
         Me.ListView1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.ListView1.FullRowSelect = True
+        Me.ListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(6, 39)
+        Me.ListView1.Location = New System.Drawing.Point(4, 22)
         Me.ListView1.MultiSelect = False
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(313, 373)
+        Me.ListView1.Size = New System.Drawing.Size(360, 385)
         Me.ListView1.TabIndex = 0
         Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
         '
-        'Label2
+        'ColumnHeader1
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(170, 16)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(46, 21)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "MHD"
+        Me.ColumnHeader1.Name = "ColumnHeader1"
+        Me.ColumnHeader1.Text = "Röstdatum"
+        Me.ColumnHeader1.Width = 110
         '
-        'Label1
+        'ColumnHeader2
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(6, 16)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(86, 21)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Röstdatum"
+        Me.ColumnHeader2.Name = "ColumnHeader2"
+        Me.ColumnHeader2.Text = "Argument"
+        Me.ColumnHeader2.Width = 134
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Name = "ColumnHeader3"
+        Me.ColumnHeader3.Text = "MHD"
+        Me.ColumnHeader3.Width = 110
         '
         'Form1
         '
@@ -136,7 +137,6 @@ Partial Class Form1
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -147,6 +147,7 @@ Partial Class Form1
     Friend WithEvents Button1 As Button
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents ListView1 As ListView
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents ColumnHeader2 As ColumnHeader
+    Friend WithEvents ColumnHeader3 As ColumnHeader
 End Class
